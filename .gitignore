@@ -1,0 +1,10 @@
+/build/
+*.o
+Breeze5
+Breeze5.exe
+Breeze5PerftTests
+*.pdb
+*.ilk
+*.dll
+*.obj
+*.exe
