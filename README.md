@@ -81,7 +81,7 @@ The uploaded network can remain outside the source ZIP. Its observed SHA-256 is:
 
 ## Performance and compatibility notes
 
-This is a functional experimental baseline, not a Stockfish-strength engine. The board is a mailbox representation rather than a bitboard/magic-bitboard implementation. Search is single-threaded; Incremental NNUE accumulator stacks, tablebase probing, Chess960, and MultiPV are not included. AVX2 kernels are optional at build time. `Threads` advertises a maximum of 1 to avoid pretending SMP exists. The `Hash` table persists between searches and can be cleared with the UCI `Clear Hash` button option.
+This is a functional experimental baseline, not a Stockfish-strength engine. The board is a mailbox representation rather than a bitboard/magic-bitboard implementation. Incremental NNUE accumulator stacks, tablebase probing, Chess960, and MultiPV are not included. AVX2 kernels are optional at build time. The `Hash` table persists between searches and can be cleared with the UCI `Clear Hash` button option.
 
 The current HCE is deliberately transparent and deterministic. Its positional terms are independent code, not a pretrained model. Do not compare its playing strength to Breeze 4.5, Stockfish, or a network-enabled Breeze 5 build without running a proper match test.
 
