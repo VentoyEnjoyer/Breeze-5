@@ -1,6 +1,4 @@
-# Breeze 5 — Clean-Room Experimental Rebuild
-
-An original C++17 chess-engine project created as a clean-room Breeze 5 rebuild. The implementation does **not** include Stockfish source files, link against Stockfish, or shell out to another chess engine. It is a standalone engine with its own board representation, move generator, search, handcrafted evaluator, UCI protocol layer, and experimental SFNNv20 loader/prober/inference path.
+# Breeze 5
 
 > **Important NNUE status:** SFNNv20 file loading, feature extraction, layer-stack selection, scalar neural inference, and UCI/search integration are implemented in this experimental build. It has passed local load, evaluate, search, and perft smoke tests, but has **not** been verified bit-for-bit against a trusted reference evaluator. It is not yet an optimized incremental NNUE engine; use it as an experimental test build, not a rated-strength release.
 
@@ -102,11 +100,6 @@ tests/uci_smoke.sh     UCI protocol/search smoke test
 tests/nnue_smoke.sh    SFNNv20 network-load/eval/search smoke test
 docs/                  Architecture and network-format notes
 ```
-
-## Clean-room note
-
-All `.cpp` and project-header files in this package are original implementation work. Public NNUE architecture and serialization documentation was consulted to identify the uploaded model's format and dimensions; no Stockfish implementation source is included or compiled. See `docs/REFERENCES.md` for the reference material used to understand the file format.
-
 
 ## Using the supplied SFNNv20 network
 
